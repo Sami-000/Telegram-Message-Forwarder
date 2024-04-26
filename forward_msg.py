@@ -3,21 +3,21 @@ import time
 import pyrogram.errors.exceptions.flood_420       
 from pyrogram import Client
 
-from = -100123456789
-to = -100123412345
+from_chat_id = -100123456789
+to_chat_id = -100123412345
 
 app = Client(
-    "session",                                     
-    api_id=1234567,
-    api_hash="1245AAAAABBBBBCCCCCDDDDDDD"
-    )
+    "session",
+    api_id=YOUR_API_ID,
+    api_hash="YOUR_API_HASH",
+)
 
 with app:                                             
     sent_messages = 0
 
     for i in range(int(sys.argv[1]), int(sys.argv[2])+1):
         try:
-            app.forward_messages(to, from, i)
+            app.forward_messages(to_chat_id, from_chat_id, i)
             print(i)
             sent_messages += 1
 
