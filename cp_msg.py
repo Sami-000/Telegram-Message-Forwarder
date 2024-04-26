@@ -17,8 +17,8 @@ with app:
 
     for i in range(int(sys.argv[1]), int(sys.argv[2])+1):
         try:
-            app.copy_message(chat_id=to_chat_id, from_chat_id=
-from_chat_id, message_id=i)
+            app.copy_message(to_chat_id,
+from_chat_id, i)
             print(i)
             sent_messages += 1
 
